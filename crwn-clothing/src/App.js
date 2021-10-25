@@ -20,6 +20,17 @@ import { Route, Switch } from "react-router-dom";
   the history prop passed from the Route component.
   switching to an url would be done by invoking: 
   props.history.push('/path')
+
+  history, location and match is only passed to 
+  the component provided for the Route. Route
+  wont pass them to the components children. 
+  We could pass them to the children, which then 
+  could pass them to their children, but this would
+  lead to prop tunnelling/prop drilling, where we only
+  pass props to then pass them further, which is bad.
+  We can prevent this in routing with withRouter, which
+  is an high order component, i.e. takes an component
+  and then returns an modified version of that component.
 */
 function App() {
   return (
