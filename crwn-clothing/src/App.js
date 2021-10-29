@@ -4,7 +4,7 @@ import { HomePage } from "./pages/home-page/HomePage";
 import { Route, Switch } from "react-router-dom";
 import ShopPage from "./pages/shop/ShopPage.jsx";
 import Header from "./components/header/Header";
-
+import SignInUpPage from "./pages/sign-in-up/SignInUpPage";
 /*
   The Switch component from react-router makes 
   it such that only one component will be rendered
@@ -41,6 +41,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/shop" component={ShopPage} />
+        <Route patch="/signup" component={SignInUpPage} />
       </Switch>
     </div>
   );
